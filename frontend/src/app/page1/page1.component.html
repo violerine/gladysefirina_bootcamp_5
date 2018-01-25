@@ -78,7 +78,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
           <a href="">
         <img  href ="#product/:id" routerLink="product/{{e._id}}" src="{{ e.image }}" alt ="image" style="width:100%"></a>
         <!--  -->
-            <button href ="#cart" routerLink="cart" class="w3-button w3-black">Buy now ({{ (cart != null) ? cart : '' }})
+            <button (click)="addtocart()" class="w3-button w3-black">Buy now 
                <i class="fa fa-shopping-cart"></i></button>
          
         <p> <br></p>
