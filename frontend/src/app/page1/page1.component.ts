@@ -119,7 +119,7 @@ export class Page1Component implements OnInit {
     let form = new FormData()
     let option = new RequestOptions({headers:new Headers({})})
     form.append("productid",this.tes._id)
-    form.append("roductname",this.tes.name)
+    form.append("productname",this.tes.name)
     form.append("image",this.tes.image)
     form.append("price",this.tes.price)
     
