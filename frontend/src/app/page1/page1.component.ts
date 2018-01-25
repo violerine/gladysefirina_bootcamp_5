@@ -20,6 +20,7 @@ export class Page1Component implements OnInit {
   keroppi ="keroppi"
   id = []
   cart=0;
+  tes
 
 
   constructor(private http : Http, private route : Router) { }
@@ -112,6 +113,25 @@ export class Page1Component implements OnInit {
         
       }
     );
+  }
+  
+  addtocart(x){
+    let form = new FormData()
+    let option = new RequestOptions({headers:new Headers({})})
+    form.append("productid",this.tes._id)
+    form.append("roductname",this.tes.name)
+    form.append("image",this.tes.image)
+    form.append("price",this.tes.price)
+    
+    this.http.post("http://localhost:3000/go/cart",form)
+    .subscribe(
+      result=>{
+        location.reload()
+      },
+      error=>{
+        console.log(error)
+      }
+    )
   }
 
 
