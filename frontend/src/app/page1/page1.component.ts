@@ -120,8 +120,8 @@ export class Page1Component implements OnInit {
     let option = new RequestOptions({headers:new Headers({})})
     form.append("productid",this.tes._id)
     form.append("productname",this.tes.name)
-    form.append("image",this.tes.image)
-    form.append("price",this.tes.price)
+    form.append("productimage",this.tes.image)
+    form.append("productprice",this.tes.price)
     
     this.http.post("http://localhost:7000/api/product/cart",form)
     .subscribe(
