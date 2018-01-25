@@ -123,7 +123,7 @@ export class Page1Component implements OnInit {
     form.append("image",this.tes.image)
     form.append("price",this.tes.price)
     
-    this.http.post("http://localhost:3000/go/cart",form)
+    this.http.post("http://localhost:7000/api/product/cart",form)
     .subscribe(
       result=>{
         location.reload()
